@@ -23,12 +23,10 @@ import static com.google.android.agera.Functions.resultListAsList;
 import static com.google.android.agera.Functions.staticFunction;
 import static com.google.android.agera.Preconditions.checkNotNull;
 import static com.google.android.agera.Receivers.nullReceiver;
-import static java.util.Collections.emptyList;
 
 import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
 import com.google.android.agera.Binder;
 import com.google.android.agera.Function;
 import com.google.android.agera.Receiver;
@@ -37,11 +35,15 @@ import com.google.android.agera.rvadapter.RepositoryPresenterCompilerStates.RPIt
 import com.google.android.agera.rvadapter.RepositoryPresenterCompilerStates.RPLayout;
 import com.google.android.agera.rvadapter.RepositoryPresenterCompilerStates.RPMain;
 import com.google.android.agera.rvadapter.RepositoryPresenterCompilerStates.RPTypedCollectionCompile;
-import java.lang.ref.WeakReference;
 import java.util.List;
 
 @SuppressWarnings({"unchecked, rawtypes"})
-final class RepositoryPresenterCompiler implements RPLayout, RPMain, RPTypedCollectionCompile {
+final class RepositoryPresenterCompiler implements
+    RPLayout, RPMain, RPItemCompile, RPTypedCollectionCompile {
+  @NonNull
+  private static final Function<Object, Object> NO_KEY_FOR_ITEM = identityFunction();
+  @NonNull
+  private static final Function<Object, Object> SAME_KEY_FOR_ITEM = staticFunction(new Object());
   @NonNull
   private Function<Object, Integer> layoutForItem;
   @NonNull
@@ -51,34 +53,40 @@ final class RepositoryPresenterCompiler implements RPLayout, RPMain, RPTypedColl
   @NonNull
   private Function<Object, Long> stableIdForItem = staticFunction(RecyclerView.NO_ID);
   @NonNull
+  private Function<Object, Object> keyForItem = NO_KEY_FOR_ITEM;
+  private boolean detectMoves;
+  @NonNull
   private Binder collectionBinder = nullBinder();
 
   @NonNull
   @Override
   public RepositoryPresenter forItem() {
     return new CompiledRepositoryPresenter(layoutForItem, binder, stableIdForItem, recycler,
-        itemAsList(), collectionBinder);
+        keyForItem != NO_KEY_FOR_ITEM, keyForItem, detectMoves, itemAsList(), collectionBinder);
   }
 
   @NonNull
   @Override
   public RepositoryPresenter<List> forList() {
     return new CompiledRepositoryPresenter(layoutForItem, binder, stableIdForItem, recycler,
-        (Function) identityFunction(), collectionBinder);
+        keyForItem != NO_KEY_FOR_ITEM, keyForItem, detectMoves, (Function) identityFunction(),
+        collectionBinder);
   }
 
   @NonNull
   @Override
   public RepositoryPresenter<Result> forResult() {
     return new CompiledRepositoryPresenter(layoutForItem, binder, stableIdForItem, recycler,
-        (Function) resultAsList(), collectionBinder);
+        keyForItem != NO_KEY_FOR_ITEM, keyForItem, detectMoves, (Function) resultAsList(),
+        collectionBinder);
   }
 
   @NonNull
   @Override
   public RepositoryPresenter<Result<List>> forResultList() {
     return new CompiledRepositoryPresenter(layoutForItem, binder, stableIdForItem, recycler,
-        (Function) resultListAsList(), collectionBinder);
+        keyForItem != NO_KEY_FOR_ITEM, keyForItem, detectMoves, (Function) resultListAsList(),
+        collectionBinder);
   }
 
   @NonNull
@@ -92,7 +100,7 @@ final class RepositoryPresenterCompiler implements RPLayout, RPMain, RPTypedColl
   @Override
   public RepositoryPresenter forCollection(@NonNull final Function converter) {
     return new CompiledRepositoryPresenter(layoutForItem, binder, stableIdForItem, recycler,
-        converter, collectionBinder);
+        keyForItem != NO_KEY_FOR_ITEM, keyForItem, detectMoves, converter, collectionBinder);
   }
 
   @NonNull
@@ -137,74 +145,19 @@ final class RepositoryPresenterCompiler implements RPLayout, RPMain, RPTypedColl
     return this;
   }
 
-  private static final class CompiledRepositoryPresenter extends RepositoryPresenter {
-    @NonNull
-    private final Function<Object, List<Object>> converter;
-    @NonNull
-    private final Binder<Object, View> collectionBinder;
-    @NonNull
-    private final Function<Object, Integer> layoutId;
-    @NonNull
-    private final Binder<Object, View> binder;
-    @NonNull
-    private final Function<Object, Long> stableIdForItem;
-    @NonNull
-    private final Receiver<View> recycler;
-    @NonNull
-    private WeakReference<Object> dataRef = new WeakReference<>(null);
-    @NonNull
-    private List items = emptyList();
+  @NonNull
+  @Override
+  public RPMain diffWith(@NonNull final Function keyForItem, final boolean detectMoves) {
+    this.keyForItem = keyForItem;
+    this.detectMoves = detectMoves;
+    return this;
+  }
 
-    CompiledRepositoryPresenter(
-        @NonNull final Function<Object, Integer> layoutId,
-        @NonNull final Binder<Object, View> binder,
-        @NonNull final Function<Object, Long> stableIdForItem,
-        @NonNull final Receiver<View> recycler,
-        @NonNull final Function<Object, List<Object>> converter,
-        @NonNull final Binder<Object, View> collectionBinder) {
-      this.collectionBinder = collectionBinder;
-      this.converter = converter;
-      this.layoutId = layoutId;
-      this.binder = binder;
-      this.stableIdForItem = stableIdForItem;
-      this.recycler = recycler;
-    }
-
-    @Override
-    public int getItemCount(@NonNull final Object data) {
-      return getItems(data).size();
-    }
-
-    @Override
-    public int getLayoutResId(@NonNull final Object data, final int index) {
-      return layoutId.apply(getItems(data).get(index));
-    }
-
-    @Override
-    public void bind(@NonNull final Object data, final int index,
-        @NonNull final RecyclerView.ViewHolder holder) {
-      final Object item = getItems(data).get(index);
-      collectionBinder.bind(data, holder.itemView);
-      binder.bind(item, holder.itemView);
-    }
-
-    @Override
-    public void recycle(@NonNull final RecyclerView.ViewHolder holder) {
-      recycler.accept(holder.itemView);
-    }
-
-    @Override
-    public long getItemId(@NonNull final Object data, final int index) {
-      return stableIdForItem.apply(getItems(data).get(index));
-    }
-
-    @NonNull
-    private List getItems(@NonNull final Object data) {
-      if (this.dataRef.get() != data) {
-        items = converter.apply(data);
-        this.dataRef = new WeakReference<>(data);
-      }
-      return items;
-    }
+  @NonNull
+  @Override
+  public RPItemCompile diff() {
+    this.keyForItem = SAME_KEY_FOR_ITEM;
+    this.detectMoves = false;
+    return this;
   }
 }
