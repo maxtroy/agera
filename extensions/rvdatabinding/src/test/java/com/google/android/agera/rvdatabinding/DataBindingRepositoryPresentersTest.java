@@ -15,7 +15,7 @@
  */
 package com.google.android.agera.rvdatabinding;
 
-import static android.databinding.DataBinderMapper.setDataBinding;
+import static androidx.databinding.DataBinderMapper.setDataBinding;
 import static com.google.android.agera.Result.failure;
 import static com.google.android.agera.Result.present;
 import static com.google.android.agera.Result.success;
@@ -38,12 +38,12 @@ import static org.mockito.Mockito.verifyNoMoreInteractions;
 import static org.mockito.Mockito.when;
 import static org.mockito.MockitoAnnotations.initMocks;
 
-import android.databinding.ViewDataBinding;
-import android.support.annotation.LayoutRes;
-import android.support.annotation.NonNull;
-import android.support.v7.util.DiffUtil;
-import android.support.v7.util.ListUpdateCallback;
-import android.support.v7.widget.RecyclerView.ViewHolder;
+import androidx.databinding.ViewDataBinding;
+import androidx.annotation.LayoutRes;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.DiffUtil;
+import androidx.recyclerview.widget.ListUpdateCallback;
+import androidx.recyclerview.widget.RecyclerView.ViewHolder;
 import android.view.View;
 import com.google.android.agera.Function;
 import com.google.android.agera.Functions;

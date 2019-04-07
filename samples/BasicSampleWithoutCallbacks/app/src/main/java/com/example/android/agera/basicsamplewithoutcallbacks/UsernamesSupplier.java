@@ -18,7 +18,7 @@ package com.example.android.agera.basicsamplewithoutcallbacks;
 import com.google.android.agera.Result;
 import com.google.android.agera.Supplier;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.util.Log;
 
 import java.util.ArrayList;

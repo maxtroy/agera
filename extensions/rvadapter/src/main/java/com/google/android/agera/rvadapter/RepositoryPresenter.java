@@ -15,11 +15,11 @@
  */
 package com.google.android.agera.rvadapter;
 
-import android.support.annotation.LayoutRes;
-import android.support.annotation.NonNull;
-import android.support.v7.util.ListUpdateCallback;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.RecyclerView.Adapter;
+import androidx.annotation.LayoutRes;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.ListUpdateCallback;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView.Adapter;
 import com.google.android.agera.Repository;
 import com.google.android.agera.rvadapter.RepositoryAdapter.Builder;
 

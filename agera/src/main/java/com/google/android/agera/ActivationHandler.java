@@ -15,7 +15,7 @@
  */
 package com.google.android.agera;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 /**
  * Receives events of the {@link UpdateDispatcher} created with

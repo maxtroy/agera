@@ -15,7 +15,7 @@
  */
 package com.google.android.agera.net;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import com.google.android.agera.Function;
 import com.google.android.agera.Result;
 

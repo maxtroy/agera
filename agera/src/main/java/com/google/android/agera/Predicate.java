@@ -15,7 +15,7 @@
  */
 package com.google.android.agera;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 /**
  * Determines a true or false value for a given input.

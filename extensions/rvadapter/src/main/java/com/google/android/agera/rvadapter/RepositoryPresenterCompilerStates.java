@@ -15,11 +15,11 @@
  */
 package com.google.android.agera.rvadapter;
 
-import android.support.annotation.LayoutRes;
-import android.support.annotation.NonNull;
-import android.support.v7.util.DiffUtil;
-import android.support.v7.util.DiffUtil.Callback;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.LayoutRes;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.DiffUtil;
+import androidx.recyclerview.widget.DiffUtil.Callback;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import com.google.android.agera.Binder;
 import com.google.android.agera.Function;

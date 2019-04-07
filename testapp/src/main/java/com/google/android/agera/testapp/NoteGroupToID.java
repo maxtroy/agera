@@ -1,6 +1,6 @@
 package com.google.android.agera.testapp;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import com.google.android.agera.Function;
 
 class NoteGroupToID implements Function<NoteGroup, Long> {

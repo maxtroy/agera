@@ -18,7 +18,7 @@ package com.google.android.agera.net;
 import static com.google.android.agera.Preconditions.checkNotNull;
 import static com.google.android.agera.Preconditions.checkState;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import com.google.android.agera.net.HttpRequestCompilerStates.HTBodyHeaderFieldRedirectsCachesConnectionTimeoutReadTimeoutCompile;
 import com.google.android.agera.net.HttpRequestCompilerStates.HTCachesConnectionTimeoutReadTimeoutCompile;
 import com.google.android.agera.net.HttpRequestCompilerStates.HTCompile;

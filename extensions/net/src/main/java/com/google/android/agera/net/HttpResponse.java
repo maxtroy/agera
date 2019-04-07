@@ -23,7 +23,7 @@ import static com.google.android.agera.Result.present;
 import static com.google.android.agera.Result.success;
 import static java.util.Locale.US;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import com.google.android.agera.Function;
 import com.google.android.agera.Result;
 import java.io.UnsupportedEncodingException;

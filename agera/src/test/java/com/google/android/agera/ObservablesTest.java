@@ -44,7 +44,7 @@ import static org.robolectric.shadows.ShadowLooper.getShadowMainLooper;
 import static org.robolectric.shadows.ShadowLooper.idleMainLooper;
 import static org.robolectric.shadows.ShadowLooper.runUiThreadTasksIncludingDelayedTasks;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import com.google.android.agera.test.mocks.MockUpdatable;
 import java.util.ArrayList;
 import java.util.Collections;

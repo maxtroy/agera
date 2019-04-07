@@ -33,9 +33,9 @@ import static org.mockito.MockitoAnnotations.initMocks;
 import static org.robolectric.annotation.Config.NONE;
 import static org.robolectric.shadows.ShadowLooper.runUiThreadTasksIncludingDelayedTasks;
 
-import android.support.annotation.NonNull;
-import android.support.v7.util.ListUpdateCallback;
-import android.support.v7.widget.RecyclerView.AdapterDataObserver;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.ListUpdateCallback;
+import androidx.recyclerview.widget.RecyclerView.AdapterDataObserver;
 import com.google.android.agera.MutableRepository;
 import com.google.android.agera.UpdateDispatcher;
 import org.junit.After;

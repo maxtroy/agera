@@ -15,8 +15,8 @@
  */
 package com.google.android.agera.database;
 
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 /**
  * Container of the compiler state interfaces supporting the creation of sql requests.

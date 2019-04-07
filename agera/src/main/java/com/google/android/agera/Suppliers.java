@@ -17,7 +17,7 @@ package com.google.android.agera;
 
 import static com.google.android.agera.Preconditions.checkNotNull;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import com.google.android.agera.Common.StaticProducer;
 
 /**

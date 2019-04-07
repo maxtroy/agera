@@ -19,7 +19,7 @@ import com.google.android.agera.BaseObservable;
 import com.google.android.agera.Updatable;
 import com.google.android.agera.UpdateDispatcher;
 
-import android.support.v4.widget.SwipeRefreshLayout;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 /**
  * This implements {@link SwipeRefreshLayout.OnRefreshListener} so it can be attached to a

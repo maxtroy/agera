@@ -15,8 +15,8 @@
  */
 package com.google.android.agera.rvdatabinding;
 
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.agera.Function;
 import com.google.android.agera.Repository;
 import com.google.android.agera.Result;

@@ -25,11 +25,11 @@ import static com.google.android.agera.Preconditions.checkNotNull;
 import static com.google.android.agera.Receivers.nullReceiver;
 import static java.util.Collections.emptyList;
 
-import android.support.annotation.LayoutRes;
-import android.support.annotation.NonNull;
-import android.support.v7.util.DiffUtil;
-import android.support.v7.util.ListUpdateCallback;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.LayoutRes;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.DiffUtil;
+import androidx.recyclerview.widget.ListUpdateCallback;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import com.google.android.agera.Binder;
 import com.google.android.agera.Function;

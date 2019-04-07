@@ -2,8 +2,8 @@ package com.google.android.agera.rvadapter.test;
 
 import static org.mockito.Mockito.verify;
 
-import android.support.annotation.NonNull;
-import android.support.v7.util.ListUpdateCallback;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.ListUpdateCallback;
 
 public final class VerifyingWrappers {
 

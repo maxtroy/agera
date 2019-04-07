@@ -16,7 +16,7 @@
 package com.google.android.agera.testapp;
 
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
+import androidx.fragment.app.FragmentActivity;
 
 public final class NotesActivity extends FragmentActivity {
   @Override

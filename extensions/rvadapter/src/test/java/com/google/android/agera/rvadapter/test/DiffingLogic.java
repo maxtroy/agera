@@ -1,7 +1,7 @@
 package com.google.android.agera.rvadapter.test;
 
-import android.support.annotation.NonNull;
-import android.support.v7.util.DiffUtil;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.DiffUtil;
 import com.google.android.agera.Function;
 import java.util.List;
 

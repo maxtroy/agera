@@ -21,8 +21,8 @@ import static com.google.android.agera.FunctionCompiler.functionCompiler;
 import static com.google.android.agera.Preconditions.checkNotNull;
 import static java.util.Collections.singletonList;
 
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import com.google.android.agera.Common.StaticProducer;
 import com.google.android.agera.FunctionCompilerStates.FItem;
 import com.google.android.agera.FunctionCompilerStates.FList;

@@ -20,7 +20,7 @@ import com.google.android.agera.Observable;
 import com.google.android.agera.Supplier;
 import com.google.android.agera.Updatable;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 /**
  * The UsernamesRepository is an {@link Observable}, implemented by extending {@link

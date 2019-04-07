@@ -19,7 +19,7 @@ apply plugin: 'com.novoda.bintray-release'
 apply plugin: 'jacoco'
 
 dependencies {
-    compile project(':agera')
+    implementation project(':agera')
 }
 
 android {
@@ -39,6 +39,8 @@ publish {
     groupId = gradle.group
     artifactId = 'net'
     version = gradle.versionName
+    publishVersion = gradle.versionName
+    desc = gradle.description
     autoPublish = false
 }
 

@@ -17,8 +17,8 @@ package com.google.android.agera.test.matchers;
 
 import static com.google.android.agera.Result.present;
 
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import com.google.android.agera.Reservoir;
 import com.google.android.agera.Result;
 import org.hamcrest.Description;
