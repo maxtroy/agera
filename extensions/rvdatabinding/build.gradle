@@ -19,9 +19,9 @@ apply plugin: 'com.novoda.bintray-release'
 apply plugin: 'jacoco'
 
 dependencies {
-    compile project(':agera')
-    compile project(':extensions:rvadapter')
-    compile "com.android.support:recyclerview-v7:$gradle.supportLibraryVersion"
+    implementation project(':agera')
+    implementation project(':extensions:rvadapter')
+    implementation "androidx.recyclerview:recyclerview:1.0.0"
 }
 
 android {
@@ -40,6 +40,8 @@ publish {
     groupId = gradle.group
     artifactId = 'rvdatabinding'
     version = gradle.versionName
+    publishVersion = gradle.versionName
+    desc = gradle.description
     autoPublish = false
 }
 

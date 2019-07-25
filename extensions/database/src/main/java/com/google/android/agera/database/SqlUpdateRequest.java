@@ -18,7 +18,7 @@ package com.google.android.agera.database;
 import static com.google.android.agera.Preconditions.checkNotNull;
 
 import android.content.ContentValues;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import java.util.Arrays;
 
 /**

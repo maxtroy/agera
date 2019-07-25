@@ -15,8 +15,8 @@
  */
 package com.google.android.agera.rvdatabinding;
 
-import android.support.annotation.IntDef;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.IntDef;
+import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.agera.Repository;
 import com.google.android.agera.rvadapter.RepositoryPresenter;
 import java.lang.annotation.Retention;

@@ -15,7 +15,7 @@
  */
 package com.google.android.agera.rvdatabinding;
 
-import static android.databinding.DataBinderMapper.setDataBinding;
+import static androidx.databinding.DataBinderMapper.setDataBinding;
 import static com.google.android.agera.rvdatabinding.test.matchers.HasPrivateConstructor.hasPrivateConstructor;
 import static com.google.android.agera.rvdatabinding.DataBindingLayoutPresenters.dataBindingLayoutPresenterFor;
 import static com.google.android.agera.rvdatabinding.RecycleConfig.CLEAR_ALL;
@@ -29,8 +29,8 @@ import static org.mockito.Mockito.verifyZeroInteractions;
 import static org.mockito.Mockito.when;
 import static org.mockito.MockitoAnnotations.initMocks;
 
-import android.databinding.ViewDataBinding;
-import android.support.annotation.LayoutRes;
+import androidx.databinding.ViewDataBinding;
+import androidx.annotation.LayoutRes;
 import android.view.View;
 import com.google.android.agera.Binder;
 import com.google.android.agera.rvadapter.LayoutPresenter;

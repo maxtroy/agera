@@ -23,8 +23,8 @@ import static com.google.android.agera.Preconditions.checkNotNull;
 import static com.google.android.agera.Preconditions.checkState;
 
 import android.content.ContentValues;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import com.google.android.agera.database.SqlRequestCompilerStates.DBArgumentCompile;
 import com.google.android.agera.database.SqlRequestCompilerStates.DBArgumentConflictCompile;
 import com.google.android.agera.database.SqlRequestCompilerStates.DBColumnConflictCompile;

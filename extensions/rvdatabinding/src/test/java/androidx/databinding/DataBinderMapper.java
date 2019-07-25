@@ -1,4 +1,4 @@
-package android.databinding;
+package androidx.databinding;
 
 import android.view.View;
 import java.util.HashMap;
@@ -18,7 +18,7 @@ public final class DataBinderMapper {
   }
 
   public ViewDataBinding getDataBinder(
-      android.databinding.DataBindingComponent component, View view, int layoutId) {
+          androidx.databinding.DataBindingComponent component, View view, int layoutId) {
     return bindings.get(layoutId);
   }
 }

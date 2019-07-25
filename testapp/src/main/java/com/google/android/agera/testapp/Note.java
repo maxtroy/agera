@@ -15,7 +15,7 @@
  */
 package com.google.android.agera.testapp;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 public final class Note {
   private final int id;

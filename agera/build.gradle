@@ -35,6 +35,8 @@ publish {
     groupId = gradle.group
     artifactId = 'agera'
     version = gradle.versionName
+    publishVersion = gradle.versionName
+    desc = gradle.description
     autoPublish = false
 }
 

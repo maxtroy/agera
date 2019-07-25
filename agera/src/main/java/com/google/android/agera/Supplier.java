@@ -15,7 +15,7 @@
  */
 package com.google.android.agera;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 /**
  * A supplier of data. Semantically, this could be a factory, generator, builder, or something else

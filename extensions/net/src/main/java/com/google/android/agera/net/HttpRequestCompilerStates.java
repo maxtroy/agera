@@ -15,7 +15,7 @@
  */
 package com.google.android.agera.net;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 /**
  * Container of the compiler state interfaces supporting the creation of a {@link HttpRequest}.

@@ -17,7 +17,7 @@ package com.google.android.agera.rvadapter;
 
 import static org.mockito.MockitoAnnotations.initMocks;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.view.View;
 import org.junit.Before;
 import org.junit.Test;

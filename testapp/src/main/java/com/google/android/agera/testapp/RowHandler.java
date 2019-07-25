@@ -20,12 +20,12 @@ import static com.google.android.agera.Repositories.mutableRepository;
 import static com.google.android.agera.rvadapter.RepositoryAdapter.repositoryAdapter;
 
 import android.os.Parcelable;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.RecyclerView.Adapter;
-import android.support.v7.widget.RecyclerView.LayoutManager;
-import android.support.v7.widget.RecyclerView.OnScrollListener;
-import android.support.v7.widget.RecyclerView.RecycledViewPool;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView.Adapter;
+import androidx.recyclerview.widget.RecyclerView.LayoutManager;
+import androidx.recyclerview.widget.RecyclerView.OnScrollListener;
+import androidx.recyclerview.widget.RecyclerView.RecycledViewPool;
 import android.view.View;
 import com.google.android.agera.Binder;
 import com.google.android.agera.Function;

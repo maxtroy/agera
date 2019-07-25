@@ -27,8 +27,8 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.robolectric.Robolectric.flushForegroundThreadScheduler;
 import static org.robolectric.annotation.Config.NONE;
 
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import com.google.android.agera.test.mocks.MockUpdatable;
 import java.util.ArrayDeque;
 import java.util.Collection;

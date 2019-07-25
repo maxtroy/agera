@@ -15,7 +15,7 @@
  */
 package com.google.android.agera;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 /**
  * Takes two inputs and merges them into one output.

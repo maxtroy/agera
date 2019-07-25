@@ -15,7 +15,7 @@
  */
 package com.google.android.agera.content.test.matchers;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Modifier;
 import org.hamcrest.Description;

@@ -15,8 +15,8 @@
  */
 package com.google.android.agera.testapp;
 
-import android.databinding.BindingAdapter;
-import android.support.annotation.NonNull;
+import androidx.databinding.BindingAdapter;
+import androidx.annotation.NonNull;
 import android.view.View;
 import android.view.View.OnClickListener;
 

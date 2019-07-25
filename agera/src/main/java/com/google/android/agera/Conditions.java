@@ -19,7 +19,7 @@ import static com.google.android.agera.Common.FALSE_CONDICATE;
 import static com.google.android.agera.Common.TRUE_CONDICATE;
 import static com.google.android.agera.Preconditions.checkNotNull;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 /**
  * Utility methods for obtaining {@link Condition} instances.

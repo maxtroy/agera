@@ -20,7 +20,7 @@ import static com.google.android.agera.Common.TRUE_CONDICATE;
 import static com.google.android.agera.Preconditions.checkNotNull;
 import static java.util.Collections.emptyList;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import com.google.android.agera.FunctionCompilerStates.FItem;
 import com.google.android.agera.FunctionCompilerStates.FList;
 import java.util.ArrayList;

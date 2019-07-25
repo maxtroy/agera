@@ -24,7 +24,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.os.Looper;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import com.google.android.agera.ActivationHandler;
 import com.google.android.agera.BaseObservable;
 import com.google.android.agera.Observable;

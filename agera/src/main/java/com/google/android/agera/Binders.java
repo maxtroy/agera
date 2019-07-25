@@ -17,7 +17,7 @@ package com.google.android.agera;
 
 import static com.google.android.agera.Common.NULL_OPERATOR;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 /**
  * Utility methods for obtaining {@link Binder} instances.

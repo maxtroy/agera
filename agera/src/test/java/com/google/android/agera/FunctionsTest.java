@@ -39,7 +39,7 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 import static org.mockito.MockitoAnnotations.initMocks;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;

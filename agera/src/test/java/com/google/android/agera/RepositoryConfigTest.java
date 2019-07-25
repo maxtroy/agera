@@ -36,7 +36,7 @@ import static org.mockito.MockitoAnnotations.initMocks;
 import static org.robolectric.annotation.Config.NONE;
 import static org.robolectric.shadows.ShadowLooper.getShadowMainLooper;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import com.google.android.agera.test.SingleSlotDelayedExecutor;
 import com.google.android.agera.test.mocks.MockUpdatable;
 import org.junit.After;

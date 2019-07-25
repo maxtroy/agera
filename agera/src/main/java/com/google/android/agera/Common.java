@@ -18,7 +18,7 @@ package com.google.android.agera;
 import static com.google.android.agera.Preconditions.checkNotNull;
 import static com.google.android.agera.Result.failure;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 final class Common {
   static final Function<Throwable, ? extends Result<?>> FAILED_RESULT = new FailedResult<>();
